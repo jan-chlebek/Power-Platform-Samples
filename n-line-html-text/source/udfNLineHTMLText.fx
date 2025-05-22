@@ -1,4 +1,11 @@
 udfNLineHTMLText(_inputText: Text, _LineAmount: Number, _HTMLControlWidth: Number) : Text = 
+    /*
+        N-Line HTML Text Truncation
+        Author: Jan Chlebek, May 2025
+        Linkedin: https://www.linkedin.com/in/jan-chlebek/
+        GitHub: https://github.com/jan-chlebek
+    */
+    
     // 5px in max-width accomodate for possible scrollbar
     // Amount of lanes is controlled with webkit-line-clamp
     $"<span style='
