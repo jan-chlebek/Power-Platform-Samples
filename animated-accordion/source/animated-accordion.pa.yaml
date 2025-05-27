@@ -74,6 +74,7 @@
                               Align: =Align.Left
                               Appearance: ='ButtonCanvas.Appearance'.Transparent
                               IconStyle: ='ButtonCanvas.IconStyle'.Outline
+                              OnSelect: =Select(btnAccordionChevron)
                               Text: =ThisItem.Header
                               Width: =Parent.Width - btnAccordionChevron.Width
                         - btnAccordionChevron:
