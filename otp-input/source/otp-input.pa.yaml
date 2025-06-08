@@ -1,0 +1,130 @@
+- txtOTPValue:
+    Control: Text@0.0.51
+    Properties:
+      Align: ='TextCanvas.Align'.Center
+      Height: =80
+      Text: |+
+        ="Provided input: " & Char(10) & If(!Or(IsBlank(lclOTPInput1), IsBlank(lclOTPInput2), IsBlank(lclOTPInput3), IsBlank(lclOTPInput4), IsBlank(lclOTPInput5), IsBlank(lclOTPInput6)),
+            lclOTPInput1 & lclOTPInput2 & lclOTPInput3 & lclOTPInput4 & lclOTPInput5 & lclOTPInput6
+        )
+      Weight: ='TextCanvas.Weight'.Semibold
+      Width: =120
+      X: =(Parent.Width - Self.Width)/2
+      Y: =400
+- cntOTPInput:
+    Control: GroupContainer@1.3.0
+    Variant: AutoLayout
+    Properties:
+      ContentLanguage: |-
+        =""
+        /*
+        OTP Input - Canvas App code snippet
+        Author: Jan Chlebek, June 2025
+        Linkedin: https://www.linkedin.com/in/jan-chlebek/
+        GitHub: https://github.com/jan-chlebek
+        */
+      DropShadow: =DropShadow.None
+      Height: =40
+      LayoutDirection: =LayoutDirection.Horizontal
+      LayoutGap: =1
+      Width: |-
+        =// Item count * (item width + gap) - 1
+        7 * 41 - 1
+      X: =(Parent.Width - Self.Width)/2
+      Y: =(Parent.Height - Self.Height)/2 - 100
+    Children:
+      - inpOTP1:
+          Control: TextInput@0.0.54
+          Properties:
+            Align: =Align.Center
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            FontColor: =RGBA(0, 0, 0, 1)
+            FontSize: =14
+            Height: =Parent.Height
+            MaxLength: =1
+            OnChange: |-
+              =UpdateContext({lclOTPInput1: Right(Self.Value, 1), lclOTPInput2: Blank()}); SetFocus(inpOTP2);
+            TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
+            Type: ='TextInputCanvas.Type'.Password
+            Value: =lclOTPInput1
+            Width: =40
+      - inpOTP2:
+          Control: TextInput@0.0.54
+          Properties:
+            Align: =Align.Center
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            FontSize: =14
+            Height: =Parent.Height
+            MaxLength: =1
+            OnChange: |-
+              =UpdateContext({lclOTPInput2: Right(Self.Value, 1), lclOTPInput3: Blank()}); SetFocus(inpOTP3);
+            TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
+            Type: ='TextInputCanvas.Type'.Password
+            Value: =lclOTPInput2
+            Width: =inpOTP1.Width
+      - inpOTP3:
+          Control: TextInput@0.0.54
+          Properties:
+            Align: =Align.Center
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            FontSize: =14
+            Height: =Parent.Height
+            MaxLength: =1
+            OnChange: |-
+              =UpdateContext({lclOTPInput3: Right(Self.Value, 1), lclOTPInput4: Blank()}); SetFocus(inpOTP4);
+            TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
+            Type: ='TextInputCanvas.Type'.Password
+            Value: =lclOTPInput3
+            Width: =inpOTP1.Width
+      - lblOTP_sep1:
+          Control: Text@0.0.51
+          Properties:
+            Align: ='TextCanvas.Align'.Center
+            Height: =Parent.Height
+            Size: =12
+            Text: ="—"
+            VerticalAlign: =VerticalAlign.Middle
+            Weight: ='TextCanvas.Weight'.Bold
+            Width: =inpOTP1.Width
+      - inpOTP4:
+          Control: TextInput@0.0.54
+          Properties:
+            Align: =Align.Center
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            FontSize: =14
+            Height: =Parent.Height
+            MaxLength: =1
+            OnChange: |-
+              =UpdateContext({lclOTPInput4: Right(Self.Value, 1), lclOTPInput5: Blank()}); SetFocus(inpOTP5);
+            TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
+            Type: ='TextInputCanvas.Type'.Password
+            Value: =lclOTPInput4
+            Width: =inpOTP1.Width
+      - inpOTP5:
+          Control: TextInput@0.0.54
+          Properties:
+            Align: =Align.Center
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            FontSize: =14
+            Height: =Parent.Height
+            MaxLength: =1
+            OnChange: |-
+              =UpdateContext({lclOTPInput5: Right(Self.Value, 1), lclOTPInput6: Blank()}); SetFocus(inpOTP6);
+            TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
+            Type: ='TextInputCanvas.Type'.Password
+            Value: =lclOTPInput5
+            Width: =inpOTP1.Width
+      - inpOTP6:
+          Control: TextInput@0.0.54
+          Properties:
+            Align: =Align.Center
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            FontSize: =14
+            Height: =Parent.Height
+            MaxLength: =1
+            OnChange: |-
+              =UpdateContext({lclOTPInput6: Right(Self.Value, 1)})
+            TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
+            Type: ='TextInputCanvas.Type'.Password
+            Value: =lclOTPInput6
+            Width: =inpOTP1.Width
