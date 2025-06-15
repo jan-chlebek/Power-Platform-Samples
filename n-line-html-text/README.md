@@ -13,7 +13,7 @@ Use Cases:
 
 Author|Socials
 --------|---------
-Jan Chlebek | [LinkedIn](https://www.linkedin.com/in/jan-chlebek/) - ([GitHub](https://github.com/jan-chlebek) )
+Jan Chlebek | [LinkedIn](https://www.linkedin.com/in/jan-chlebek/) - ([GitHub](https://github.com/jan-chlebek))
 
 ## Minimal path to awesome
 

@@ -17,7 +17,7 @@ Manually built container set, inspired on top of the idea of an animated accordi
 
 Author|Socials
 --------|---------
-Jan Chlebek | [LinkedIn](https://www.linkedin.com/in/jan-chlebek/) - ([GitHub](https://github.com/jan-chlebek) )
+Jan Chlebek | [LinkedIn](https://www.linkedin.com/in/jan-chlebek/) - ([GitHub](https://github.com/jan-chlebek))
 
 ## Minimal path to awesome
 

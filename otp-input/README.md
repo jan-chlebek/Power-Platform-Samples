@@ -13,7 +13,7 @@ Implementation of these controls posed a few challenges to figuring out the best
 
 Author|Socials
 --------|---------
-Jan Chlebek | [LinkedIn](https://www.linkedin.com/in/jan-chlebek/) - ([GitHub](https://github.com/jan-chlebek) )
+Jan Chlebek | [LinkedIn](https://www.linkedin.com/in/jan-chlebek/) - ([GitHub](https://github.com/jan-chlebek))
 
 ## Minimal path to awesome
 
